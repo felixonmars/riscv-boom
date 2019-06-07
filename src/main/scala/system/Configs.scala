@@ -72,6 +72,14 @@ class MediumBoomConfig extends Config(
   new WithoutTLMonitors ++
   new freechips.rocketchip.system.BaseConfig)
 
+class TestBoomConfig extends Config(
+  new WithRVC ++
+  new WithMegaBeagleBooms ++
+  new DefaultBoomConfig ++
+  new WithNBoomCores(1) ++
+  new WithoutTLMonitors ++
+  new freechips.rocketchip.system.BaseConfig)
+
 class MegaBoomConfig extends Config(
   new WithRVC ++
   new WithMegaBooms ++
