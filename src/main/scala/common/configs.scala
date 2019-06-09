@@ -20,7 +20,7 @@ import boom.ifu._
 import boom.bpu._
 import boom.exu._
 import boom.lsu._
-import boom.system.BoomTilesKey
+import boom.system.{BoomTilesKey}
 
 /**
  * Baseline BOOM configuration.
