@@ -46,6 +46,13 @@ import boom.common._
 
 // scalastyle:off
 
+class BoomConfig extends Config(
+  new WithRVC ++
+  new BaseBoomConfig ++
+  new WithNBoomCores(1) ++
+  new WithoutTLMonitors ++
+  new freechips.rocketchip.system.BaseConfig)
+
 // Main configs. SmallBoomConfig and MediumBoomConfig are best-maintained
 //   MediumBoomConfig is typically described in documentation
 //   All RV64IMAFDC
@@ -193,8 +200,8 @@ class MediumBoomAndRocketConfig extends Config(
   new WithoutTLMonitors ++
   // boom param setup
   new WithRVC ++
-  new BaseBoomConfig ++
   new WithMediumBooms ++
+  new BaseBoomConfig ++
   // create boom tile
   new WithNBoomCores(1) ++
   // create rocket tile
